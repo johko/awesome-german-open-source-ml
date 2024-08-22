@@ -1,0 +1,6 @@
+# Natural Language Processing (NLP)
+
+| Name | Description | Github | Website | Other Links |
+| :--- | :--- | :--- | :--- | :--- |
+| [Explosion](https://github.com/explosion) | Best known for the [spaCy](https://github.com/explosion/spacy) library, one of the most popular Python packages for everything NLP. It pays off to check their profile for other great repos like [spacy-llm](https://github.com/explosion/spacy-llm) and [curated-transformers](https://github.com/explosion/curated-transformers) | https://github.com/explosion | https://explosion.ai/ | [<img src="res/huggingface_512.png" alt="Explosion on Hugging Face" width="50" height="50">](https://huggingface.co/explosion)
+| [Deepset](https://github.com/deepset) | Another young Berlin based company, best known for their LLM framework [Haystack](https://github.com/deepset-ai/haystack). Their first step into the limelight was by training a [BERT based German language model](https://huggingface.co/deepset/gbert-base) | https://github.com/deepset | https://www.deepset.ai/ | [<img src="res/huggingface_512.png" alt="deepset on Hugging Face" width="50" height="50">](https://huggingface.co/deepset) |
