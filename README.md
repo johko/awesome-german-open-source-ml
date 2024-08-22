@@ -6,6 +6,7 @@ A criteria for getting listed here, is that the main or at least a big part of t
 ## Categories
 Everyone of the following categories has a corresponding file, listing the companies and projects:
 - [Natural Language Processing](nlp.md)
-- Computer Vision
-- MLOps
-- Generative AI
+- [Computer Vision](computer_vision.md)
+- [MLOps](mlops.md)
+- [Generative AI](gen_ai.md)
+- [General ML](general_ml.md)
