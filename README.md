@@ -1,4 +1,8 @@
-# Awesome German Open Source Machine Learning 
+![Banner Image](./res/banner_image.jpeg){: style="display:block;margin-left:auto;margin-right:auto;width:80%;"}
+
+
+<h1 align="center"> Awesome German Open Source Machine Learning</h1>
+
 Explore the amazing landscape of Open Source Machine Learning/AI projects, based in Germany.
 
 A criteria for getting listed here, is that the main or at least a big part of the developers working on the project/for the company are located within Germany.
