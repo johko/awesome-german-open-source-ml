@@ -4,7 +4,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Explore the amazing landscape of Open Source Machine Learning/AI projects, based in Germany.
+This repo contains an overview of open source machine learning projects and companies providing these, which are based in Germany.
 
 A criteria for getting listed here, is that the main or at least a big part of the developers working on the project/for the company are located within Germany.
 
@@ -12,6 +12,8 @@ A criteria for getting listed here, is that the main or at least a big part of t
 Following are different categories of Machine Learning and the corresponding projects, including links to their social media representations
 
 ### 📖 Natural Language Processing (NLP)
+
+The projects listed here all provide frameworks to perform Natural Language Processing tasks.
 
 | Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Description | Links|
 | :--- | :--- | :--- |
@@ -22,6 +24,8 @@ Following are different categories of Machine Learning and the corresponding pro
 ---
 
 ### 👁️👁️ Computer Vision
+
+Here you can find projects that mainly focus on solving Computer Vision problems.
 
 | Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Description | Links |
 | :--- | :--- | :--- |
@@ -42,7 +46,7 @@ The projects here are focused on Generative AI tasks like LLMs, text-to-image, t
 
 ### 🛠️ MLOps
 
-Building, Training and Deploying Machine Learning models can be a real hazzle in today's overflowing ML landscape. These projects are trying to take the biggest efforts and frustration out of the process.
+Building, Training and Deploying Machine Learning models can be a real struggle in today's overflowing ML landscape. These projects are trying to take the biggest efforts and frustration out of the process.
 
 | Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description | Links |
 | :------------------- | :--- | :--- |
