@@ -6,7 +6,9 @@
 
 This repo contains an overview of open source machine learning projects and companies providing these, which are based in Germany.
 
-A criteria for getting listed here, is that the main or at least a big part of the developers working on the project/for the company are located within Germany.
+A criteria for getting listed here, is that the roots of the project are in Germany or at least a big part of the developers working on the project/for the company are located within Germany.
+
+Contributions to this list are very welcome 🤗 Be it corrections, additions or suggestions - feel free to open an Issue or Pull Request.
 
 ## Categories
 Following are different categories of Machine Learning and the corresponding projects, including links to their social media representations
@@ -25,7 +27,7 @@ The projects listed here all provide frameworks to perform Natural Language Proc
 
 ### 👁️👁️ Computer Vision
 
-Here you can find projects that mainly focus on solving Computer Vision problems.
+Here you can find projects that mainly focus on solving Computer Vision problems, which includes tasks like image classification, object detection, object segmentation.
 
 | Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Description | Links |
 | :--- | :--- | :--- |
@@ -76,4 +78,4 @@ Here are all the projects that don't fit into one of the other categories (or in
 | <img src="res/logos/laion.jpeg" width="80" height="80"><br>[LAION e.V.](https://github.com/laion-ai) | LAION is a non-profit organization with the aim to create free and open-source models and datasets. They have a big community and already released many interesting projects, like [Open Assistant](https://github.com/LAION-AI/Open-Assistant) and [CLAP](https://github.com/LAION-AI/CLAP). | [<img src="res/github_logo.png" alt="LAION on GitHub" width="30" height="30">](https://github.com/LAION-AI/) [<img src="res/internet-54.png" alt="website of LAION" width="30" height="30">](https://laion.ai/) [<img src="res/huggingface_512.png" alt="LAION on Hugging Face" width="30" height="30">](https://huggingface.co/laion) [<img src="res/discord_logo.png" alt="LAION discord server" width="30" height="30">](https://discord.com/invite/eq3cAMZtCC) 
 ---
 
-And last but not least a little shout-out to Johannes Rieke and his great (albeit a little outdated) collection of [Berlin based Machine Learning start-ups](https://github.com/jrieke/awesome-machine-learning-startups-berlin?tab=readme-ov-file) ;)
+And last but not least a little shout-out to Johannes Rieke and his great (albeit a little outdated) collection of [Berlin based Machine Learning start-ups](https://github.com/jrieke/awesome-machine-learning-startups-berlin?tab=readme-ov-file) 😉
