@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - uses: actions/setup-python@v5
         with:
@@ -21,12 +23,13 @@ jobs:
 
       - name: Update activity indicators
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: python .github/scripts/update_activity.py README.md
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ secrets.GH_PAT }}
           commit-message: 'chore: update repository activity indicators'
           title: 'chore: update repository activity indicators'
           body: 'Automated weekly update of 🟢🟡🔴 activity indicators based on last commit date.'
