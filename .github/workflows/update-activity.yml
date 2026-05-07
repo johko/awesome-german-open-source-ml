@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   update:
@@ -23,8 +24,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/update_activity.py README.md
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: 'chore: update repository activity indicators'
-          file_pattern: README.md
+          commit-message: 'chore: update repository activity indicators'
+          title: 'chore: update repository activity indicators'
+          body: 'Automated weekly update of 🟢🟡🔴 activity indicators based on last commit date.'
+          branch: chore/update-activity-indicators
+          delete-branch: true
