@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Update repository activity indicators in README.md.
 
-Finds all <!-- REPO:owner/repo -->emoji<!-- /REPO --> markers and replaces
-the emoji based on days since the last commit:
+Finds all <!-- ACCOUNT:owner -->emoji<!-- /ACCOUNT --> markers and replaces
+the emoji based on days since the account's most recently pushed-to repo:
   🟢 < 30 days  |  🟡 30–180 days  |  🔴 > 180 days  |  ⬜ unavailable
 """
 import json
@@ -16,8 +16,8 @@ from datetime import datetime, timezone
 THRESHOLDS = (30, 180)  # green→yellow, yellow→red (days)
 
 
-def get_last_commit_date(repo: str, token: str | None) -> datetime | None:
-    url = f"https://api.github.com/repos/{repo}/commits?per_page=1"
+def get_account_last_push(owner: str, token: str | None) -> datetime | None:
+    url = f"https://api.github.com/users/{owner}/repos?sort=pushed&per_page=1"
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "User-Agent": "awesome-german-ml-activity-updater",
@@ -29,19 +29,19 @@ def get_last_commit_date(repo: str, token: str | None) -> datetime | None:
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read())
             if data:
-                date_str = data[0]["commit"]["committer"]["date"]
-                return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+                pushed_at = data[0]["pushed_at"]
+                return datetime.fromisoformat(pushed_at.replace("Z", "+00:00"))
     except urllib.error.HTTPError as e:
-        print(f"  HTTP {e.code} for {repo}", file=sys.stderr)
+        print(f"  HTTP {e.code} for {owner}", file=sys.stderr)
     except Exception as e:
-        print(f"  Error fetching {repo}: {e}", file=sys.stderr)
+        print(f"  Error fetching {owner}: {e}", file=sys.stderr)
     return None
 
 
-def days_to_emoji(last_commit: datetime | None) -> str:
-    if last_commit is None:
+def days_to_emoji(last_push: datetime | None) -> str:
+    if last_push is None:
         return "⬜"
-    days = (datetime.now(timezone.utc) - last_commit).days
+    days = (datetime.now(timezone.utc) - last_push).days
     if days < THRESHOLDS[0]:
         return "🟢"
     if days < THRESHOLDS[1]:
@@ -53,17 +53,17 @@ def update_readme(path: str, token: str | None) -> bool:
     with open(path) as f:
         content = f.read()
 
-    pattern = re.compile(r"<!-- REPO:([\w./\-]+) -->.*?<!-- /REPO -->", re.DOTALL)
+    pattern = re.compile(r"<!-- ACCOUNT:([\w.\-]+) -->.*?<!-- /ACCOUNT -->", re.DOTALL)
     changed = False
 
     def replacer(m: re.Match) -> str:
         nonlocal changed
-        repo = m.group(1)
-        last_commit = get_last_commit_date(repo, token)
-        emoji = days_to_emoji(last_commit)
-        days_ago = (datetime.now(timezone.utc) - last_commit).days if last_commit else "N/A"
-        print(f"  {repo}: {emoji}  (last commit: {days_ago} days ago)")
-        replacement = f"<!-- REPO:{repo} -->{emoji}<!-- /REPO -->"
+        owner = m.group(1)
+        last_push = get_account_last_push(owner, token)
+        emoji = days_to_emoji(last_push)
+        days_ago = (datetime.now(timezone.utc) - last_push).days if last_push else "N/A"
+        print(f"  {owner}: {emoji}  (last push: {days_ago} days ago)")
+        replacement = f"<!-- ACCOUNT:{owner} -->{emoji}<!-- /ACCOUNT -->"
         if replacement != m.group(0):
             changed = True
         return replacement
