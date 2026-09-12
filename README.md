@@ -58,7 +58,7 @@ Some of the projects/companies listed here might not have popular repositories o
 
 ---
 
-| <img src="res/logos/3code.png" width="80" height="80"/><br>[3code](https://github.com/capocasa/3code) | Munich-based solo project: an open-source (MIT) terminal coding agent built for token economy. Aggressive caching, cybernetic context mode and self-clearing execution let the same model do 1.5–5× more work per token at similar or better completion rates (SWE-bench Verified subset). BYOK — pairs EU providers (TensorX, Mistral) for sensitive work with cost-effective providers (Z.ai, DeepSeek, OpenRouter) for uncritical work. Single 3.2 MB Nim binary, no telemetry. | <!-- ACCOUNT:capocasa -->🟢<!-- /ACCOUNT --> | <a href="https://github.com/capocasa/3code"><img src="res/github_logo.png" width="30" height="30"/></a> <a href="https://3code.capocasa.dev/"><img src="res/internet-54.png" width="30" height="30"/></a>
+| <img src="res/logos/3code.png" width="80" height="80"/><br>[3code](https://github.com/capocasa/3code) | Munich-based solo project: a free and open source (MIT) command-line coding agent built from the ground up to be efficient enough to use 3rd party token providers without a coding plan. Tight, no-frills interface, instant startup, works on osx/windows/linux/termux; supports a wide range of providers including EU ones (Mistral, TensorX) for sensitive work. | <!-- ACCOUNT:capocasa -->🟢<!-- /ACCOUNT --> | <a href="https://github.com/capocasa/3code"><img src="res/github_logo.png" width="30" height="30"/></a> <a href="https://3code.capocasa.dev/"><img src="res/internet-54.png" width="30" height="30"/></a>
 
 ---
 
